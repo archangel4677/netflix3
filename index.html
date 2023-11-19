@@ -1,0 +1,1834 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="stylesheet" href="./styles.css"/>
+    <link rel="stylesheet" href="./POSTERS.CSS"/>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+    <script src="./responsive.js"></script>
+    <script src="./slider.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+   
+  </head>
+  <body>
+  
+    <div class="topnav">
+      <div class="logo">
+        <a href="https://www.netflix.com/browse">
+          <img src="./assets/netflix-logo.png" alt="Logo Image">
+        </a>
+      </div>
+      <div class="browse" id="myTopnav">
+        <a href="./index.html">Home</a>
+        <a href="./tvshows.html">TV Shows</a>
+        <a href="#movies">Movies</a>
+        <a href="#new&popular">New and Popular</a>
+        <a href="#MyList">My List</a>
+        <a href=#Browsebylanguage>Browse by Languages</a>
+        <a href="javascript:void(0);" class="icon" onclick="myResponsive()">&#9776;</a>
+      </div>
+      <div class="search">
+         <input type="text"  placeholder="Titles,Peoples,Genres"  >
+         <a href="#searchbutton">
+         <img src="./assets/search-regular-24.png">
+        </a>
+       </div>
+      <div class="alert">
+        <a href="#"><img src="./assets/bell-regular-24.png"></a>  
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn"><img src="./assets/icon32px.png">
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+         <ul class="userlist" >
+         <li>  <div class="grid-container"><a href="https://www.netflix.com/browse"><img src="./assets/user1.png">
+        <div class="username">User 1</div></a> </div></li>
+         <li> <div class="grid-container"><a href="https://www.netflix.com/browse"><img src="./assets/user2.png">
+        <div class="username">User 2</div></a> </div></li>
+         <li> <div class="grid-container"> <a href="https://www.netflix.com/browse"><img src="./assets/user3.png">
+        <div class="username">User 3</div></a> </div></li>
+        </ul>
+        
+        </div>
+       
+      </div>
+      
+    </div>
+    <div class="banner">
+      <iframe class="banner-video" width="560" height="315" src="https://www.youtube-nocookie.com/embed/Au9Uz4_H6zA?si=XgY9uXW1M8ooi-BB&amp;controls=0&autoplay=1" title="YouTube video player" frameborder="0"  allowfullscreen></iframe>
+    </div>
+     
+
+ 
+  <div class="trending-row">
+    <div class="header-trending">
+    <h3 class="title">Trending Worldwide </h3>
+    <div class="progress-bar" id="progress-bar">
+      <div class="progress-item"></div>
+    <div class="progress-item"></div>
+    <div class="progress-item"></div>
+    <div class="progress-item"></div>
+      
+    </div>
+  </div>
+  <div class="movie-slider">
+    
+    <button class="handle left-handle"><div class="text">&#8249;</div></button>
+    <div class="slider" id="slider">
+      <div class="m1"> <div class="poster">
+        
+        <img src="./assets/poster1_files/p (1).jpg" id="poster">
+        <h1 class="moviename">
+          Sister Death
+        </h1>
+        <p>
+           2022
+            
+        </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+        <a href="#"><img id="play" src="./assets/play-circle-regular-24.png"></a>
+         <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/Ze6plKbzkY0?si=0s3SgZzoZ1bm0hnO','Sister Death')"><button class=trailer>Watch Trailer</button></a>
+      </div>
+    
+      </div>
+      <div class="m1"> <div class="poster">
+       <img src="./assets/poster1_files/p (10).jpg" alt="Your Image">
+      <h1 class="moviename">
+        Wingwomen
+       </h1>
+       <p>
+        2023
+       </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+       <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/Au9Uz4_H6zA?si=630A6Y6-Px0nTbgZ','Wingwomen')"><button class=trailer>Watch Trailer</button></a>
+      </div>
+
+</div>
+<div class="m1"> <div class="poster">
+  <img src="./assets/poster1_files/p (1).webp" alt="">
+ <h1 class="moviename">
+     Legion
+  </h1>
+  <p>
+       2016
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/P6p01-in6-k?si=XPID-UpFmeQl4tXz','Legion')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+  <img src="./assets/poster1_files/p (10).webp" alt="">
+ <h1 class="moviename">
+     Jurassic World 
+  </h1>
+  <p>
+       2021
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/fb5ELWi-ekk?si=d2W0J0RA0YUHkhZb','Jurassic World Dominion')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+  <img src="./assets/poster1_files/p (11).jpg" alt="">
+ <h1 class="moviename">
+     Life on Our Planet
+  </h1>
+  <p>
+       2023
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/xy1v0pzMP4g?si=FKf7IzRnUeORVr_m','Life on Our Planet')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+  <img src="./assets/poster1_files/p (11).webp" alt="">
+ <h1 class="moviename">
+     The Amazing Spider Man
+  </h1>
+  <p>
+       2017
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/-tnxzJ0SSOw?si=Eyz2SLTRHVZ4og_u','The Amazing Spider Man')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+  <img src="./assets/poster1_files/p (12).jpg" alt="">
+ <h1 class="moviename">
+     Pluto
+  </h1>
+  <p>
+       2023
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/9ez8lm9I26Y?si=N6TP-H-JEGHV8SQT','Pluto')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (12).webp" alt="">
+ <h1 class="moviename">
+     Kabhi Khushi Khabi Gham
+  </h1>
+  <p>
+       1998
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/7uY1JbWZKPA?si=4DZW37wm9grOQLY-','Kabhi Khushi Khabi Gham')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (13).jpg" alt="">
+ <h1 class="moviename">
+     Kaala Pani
+  </h1>
+  <p>
+       2023
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/6ph4WPZIrbM?si=wsw4CE9s8ex68Pqe','Kaala Pani')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (13).webp" alt="">
+ <h1 class="moviename">
+    Nobody
+  </h1>
+  <p>
+       2020
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/wZti8QKBWPo?si=IbrT2mIuDDMWSfM5','Nobody')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (14).jpg" alt="">
+ <h1 class="moviename">
+     Money Heist
+  </h1>
+  <p>
+       2019
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/_InqQJRqGW4?si=cUNfLIlSRow8jimx','Money Heist')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (14).webp" alt="">
+ <h1 class="moviename">
+     World War Z
+  </h1>
+  <p>
+       2016
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/Md6Dvxdr0AQ?si=AudFYJfe1t5J3dtI','World War Z')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (15).jpg" alt="">
+ <h1 class="moviename">
+     Stranger Things
+  </h1>
+  <p>
+       2018
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/b9EkMc79ZSU?si=foeQGXtspC0vKXrl','Stranger Things')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (15).webp" alt="">
+ <h1 class="moviename">
+     Swades
+  </h1>
+  <p>
+      2000
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/vc7AZNWvs0M?si=0mjCh8Wm1QFYREX0','Swades')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (16).jpg" alt="">
+ <h1 class="moviename">
+     Designated Survivor
+  </h1>
+  <p>
+       2017
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/YRA1gb3SJtw?si=zUAw6O0egjbUkFQz','Designated Survivor')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (16).webp" alt="">
+ <h1 class="moviename">
+     Big Bang Theory
+  </h1>
+  <p>
+       2012
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/WBb3fojgW0Q?si=f_WN0aeUc70_E3sY','Big Bang Theory')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>   
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (17).jpg" alt="">
+ <h1 class="moviename">
+     Mindhunter
+  </h1>
+  <p>
+       2019
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/DHJO6VR6TYY?si=cr5RlXg3TTYsvvvg','Mindhunter')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>  
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (17).webp" alt="">
+ <h1 class="moviename">
+     A.B.C.D
+  </h1>
+  <p>
+       2013
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/5ljQwdGWdWc?si=Wz2QL-DboRSXrxwj','A.B.C.D')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>  
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (18).jpg" alt="">
+ <h1 class="moviename">
+     Titans
+  </h1>
+  <p>
+       2020
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/iH44Z0QwrWQ?si=uk_GfPnZz_sWCt0A','Titans')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>     
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (18).webp" alt="">
+ <h1 class="moviename">
+     Two and a Half Men
+  </h1>
+  <p>
+       2011
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/097pUW0L_Xc?si=Lvths3bPJ6CLebyM','Two and a Half Men')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div> 
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (63).webp" alt="">
+ <h1 class="moviename">
+     Dr.Stone
+  </h1>
+  <p>
+       2022
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/S6OmSIxSj14?si=D3QzZ8nFfthxh6av','Dr.Stone')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div> 
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (64).jpg" alt="">
+ <h1 class="moviename">
+     Lookism
+  </h1>
+  <p>
+       2021
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/LPgBQSya5rU?si=uahDhK0dpZ9JHjRq','Lookism')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div> 
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (65).jpg" alt="">
+ <h1 class="moviename">
+     Surviving Summer
+  </h1>
+  <p>
+       2021
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/uoUahPhhUYY?si=75KNQGY_aGhJ6BAY','Surviving Summer')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div> 
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (66).jpg" alt="">
+ <h1 class="moviename">
+     Skull Island
+  </h1>
+  <p>
+       2022
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/AzVEn9C0Ndw?si=03IMLkUXBXHIJgLX','Skull Island')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div> 
+   
+      
+    </div>
+    <button class="handle right-handle"><div class="text">&#8250;</div></button>
+    
+  </div>
+  </div>
+  <div class="trending-row">
+    <div class="header-trending">
+    <h3 class="title">For You</h3>
+    <div class="progress-bar" id="progress-bar">
+      <div class="progress-item"></div>
+      <div class="progress-item"></div>
+      <div class="progress-item"></div>
+      <div class="progress-item"></div>
+  
+      
+    </div>
+  </div>
+  <div class="movie-slider">
+    
+    <button class="handle left-handle"><div class="text">&#8249;</div></button>
+    <div class="slider" id="slider">
+      <div class="m1"> <div class="poster">
+        <img src="./assets/poster1_files/p (19).jpg" alt="">
+       <h1 class="moviename">
+          Life on Our Planet
+        </h1>
+        <p>
+             2023
+            
+        </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+         <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+         <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/xy1v0pzMP4g?si=Q3MHz3ZPBqOBZBZZ','Life on Our Planet')"><button class=trailer>Watch Trailer</button></a>
+      </div>
+    
+      </div>
+      <div class="m1"> <div class="poster">
+        <img src="./assets/poster1_files/p (7).jpg" alt="">
+      <h1 class="moviename">
+        Onimusha
+       </h1>
+       <p>
+         2023
+       </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+       <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/bQRCyrNmhj4?si=CIkYWsvQ33kVxFxy','MAD')"><button class=trailer>Watch Trailer</button></a>
+      </div>
+
+</div>
+<div class="m1"> <div class="poster">
+  <img src="./assets/poster1_files/p (2).jpg" alt="">
+ <h1 class="moviename">
+     Dark
+  </h1>
+  <p>
+       2018
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/rrwycJ08PSA?si=tlSRVdofcW0L3zLH','Dark')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+  <img src="./assets/poster1_files/p (2).webp" alt="">
+ <h1 class="moviename">
+     Dil Dhadakne Do
+  </h1>
+  <p>
+       2017
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/qfnJCv4_1Ts?si=KyLWvEKtMHl88pAR','DIl Dhadakne Do')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+  <img src="./assets/poster1_files/p (20).webp" alt="">
+ <h1 class="moviename">
+     Monster
+  </h1>
+  <p>
+       2015
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/9aS-EgdAq6U?si=zwieh79-oOkI8EOG','Monster')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+  <img src="./assets/poster1_files/p (21).webp" alt="">
+ <h1 class="moviename">
+     Vampire Diaries
+  </h1>
+  <p>
+       2012
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/BmVmhjjkN4E?si=2bLXr9YB6JYi2AT9','Vampire Diaries')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+  <img src="./assets/poster1_files/p (22).webp" alt="">
+ <h1 class="moviename">
+     The Walking Dead
+  </h1>
+  <p>
+       2010
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/sfAc2U20uyg?si=dR5gI8CBwio-nXVK','The Walking Dead')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (23).webp" alt="">
+ <h1 class="moviename">
+     83
+  </h1>
+  <p>
+       2022
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/QHdkC6Kn0Io?si=kYByzbdDuhhh9EBb','83')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (24).webp" alt="">
+ <h1 class="moviename">
+     Rock On
+  </h1>
+  <p>
+       2016
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/P7aJlKdHgWY?si=Gld-Xi8eMnzF7Mwm','Rock On')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (25).webp" alt="">
+ <h1 class="moviename">
+     OMG 2
+  </h1>
+  <p>
+       2023
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/Y6ZKXqM7HNQ?si=GseUtYcGaxg7vaah','OMG 2')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (26).webp" alt="">
+ <h1 class="moviename">
+     Naruto
+  </h1>
+  <p>
+       2000
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/QczGoCmX-pI?si=ivKd5OnfVk8OCjQu','Naruto')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (27).webp" alt="">
+ <h1 class="moviename">
+     Qarib Qarib Singlle
+  </h1>
+  <p>
+       2021
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/MU4QL-VwDlc?si=5pMsjX2W6I_hXA-r','Qarib Qarib Singlle')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (28).webp" alt="">
+ <h1 class="moviename">
+     Iraivan
+  </h1>
+  <p>
+       2023
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/-qX93tgvung?si=LD3O8fLMPLYXQwln','Iraivan')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (29).webp" alt="">
+ <h1 class="moviename">
+     Jack Reacher
+  </h1>
+  <p>
+       2019
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/Q-oxhxD32MM?si=-wGowNA0-J9sWxfn','Jack Reacher')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (3).jpg" alt="">
+ <h1 class="moviename">
+     Blue Eye Samurai
+  </h1>
+  <p>
+       2023
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/nJ1yQn17lbE?si=M4ZRx9te5bkSY_H-','Blue Eye Samurai')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (3).webp" alt="">
+ <h1 class="moviename">
+     The Pope's Exorcist
+  </h1>
+  <p>
+       2020
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/YJXqvnT_rsk?si=yg4WBweqyeMAZ6cW','The Pope\'s Exorcist')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>   
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (31).webp" alt="">
+ <h1 class="moviename">
+    Brooklyn Nine-Nine
+  </h1>
+  <p>
+       2013
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/l94tBy1XwbY?si=KMh2VaazxJbeIEtG','Brooklyn Nine-Nine' )"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>  
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (32).webp" alt="">
+ <h1 class="moviename">
+     Jujutsu Kaisen S2
+  </h1>
+  <p>
+       2023
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/9OhV3IWUsxE?si=gIhYXKEZoXm8ijI3','Jujutsu Kaisen')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>  
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (33).webp" alt="">
+ <h1 class="moviename">
+     Blacklist
+  </h1>
+  <p>
+       2010
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/vc-BAjeBFww?si=P2B57DDAv2GILm_d','Blacklist')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>     
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (34).webp" alt="">
+ <h1 class="moviename">
+     Hajime No Ippo
+  </h1>
+  <p>
+       1999
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/FNpjwxk8-a8?si=i_3wh965y9zpxzj8','Hajime No Ippo')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (67).jpg" alt="">
+ <h1 class="moviename">
+     Lucifer
+  </h1>
+  <p>
+       2014
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/X4bF_quwNtw?si=kD4UL4Wg-twzSToZ','Lucifer')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (68).jpg" alt="">
+ <h1 class="moviename">
+     The Witcher
+  </h1>
+  <p>
+       2022
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/SzS8Ao0H6Co?si=R6EF6LDE4zQjMXYY','The Witcher')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (69).jpg" alt="">
+ <h1 class="moviename">
+     The Killer
+  </h1>
+  <p>
+       2023
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/5S7FR_HCg9g?si=qQi75yiYJYTGUDNO','The Killer')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (70).jpg" alt="">
+ <h1 class="moviename">
+     My Happy Marriage
+  </h1>
+  <p>
+       2018
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/dURh9kVzcw8?si=WrR6k_FsfvoUmPNP','My Happy Marriage')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+</div>
+    <button class="handle right-handle"><div class="text">&#8250;</div></button>
+    
+  
+  
+  </div>
+  <div class="trending-row">
+    <div class="header-trending">
+    <h3 class="title">Award Winning Films</h3>
+    <div class="progress-bar" id="progress-bar">
+      <div class="progress-item"></div>
+      <div class="progress-item"></div>
+      <div class="progress-item"></div>
+      <div class="progress-item"></div>
+  
+      
+    </div>
+  </div>
+  <div class="movie-slider">
+    
+    <button class="handle left-handle"><div class="text">&#8249;</div></button>
+    <div class="slider" id="slider">
+      <div class="m1"> <div class="poster">
+        <img src="./assets/poster1_files/p (35).webp" alt="">
+       <h1 class="moviename">
+          Kushi
+        </h1>
+        <p>
+             2023
+            
+        </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+         <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+         <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/bk_5n4mS-lk?si=smGHcK_72HIwAlGR','Kushi')"><button class=trailer>Watch Trailer</button></a>
+      </div>
+    
+      </div>
+      <div class="m1"> <div class="poster">
+        <img src="./assets/poster1_files/p (36).webp" alt="">
+      <h1 class="moviename">
+        Cheat Skill
+       </h1>
+       <p>
+         2021
+       </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+       <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/rgwptQDAv2M?si=LQOmyYPWSaXgcEVf','Cheat Skill')"><button class=trailer>Watch Trailer</button></a>
+      </div>
+
+</div>
+<div class="m1"> <div class="poster">
+  <img src="./assets/poster1_files/p (62).webp" alt="">
+ <h1 class="moviename">
+     How to Get Away With Murder
+  </h1>
+  <p>
+       2016
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/dkb-aBaxkVk?si=rZ2fU-uoec8M-A53','How to Get Away With Murder')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+  <img src="./assets/poster1_files/p (63).jpg" alt="">
+ <h1 class="moviename">
+     Peaky Blinders
+  </h1>
+  <p>
+       2016
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/Ruyl8_PT_y8?si=jbNFIwmWCWnSuZUR','Peaky Blinders')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+  <img src="./assets/poster1_files/p (38).webp" alt="">
+ <h1 class="moviename">
+     Spy x Family
+  </h1>
+  <p>
+       2021
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/CCXLUQzuigw?si=UuHkShW0PZ44AXvv','Spy x Family')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+  <img src="./assets/poster1_files/p (39).webp" alt="">
+ <h1 class="moviename">
+     Spiderman
+  </h1>
+  <p>
+       2006
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/1s9Yln0YwCw?si=s7vfVnXFOBBLADwn','Spiderman')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+  <img src="./assets/poster1_files/p (4).jpg" alt="">
+ <h1 class="moviename">
+     Lost in Space
+  </h1>
+  <p>
+       2019
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/fzmM0AB60QQ?si=sF7P7GaTft9yNVDz','Lost in Space')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (4).webp" alt="">
+ <h1 class="moviename">
+     Monster Hunter
+  </h1>
+  <p>
+       2021
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/3od-kQMTZ9M?si=AKkDmUaB-3ISZ_Ap','Monster Hunter')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (40).webp" alt="">
+ <h1 class="moviename">
+     New Amsterdam
+  </h1>
+  <p>
+       2016
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/4pmG-c-P824?si=Aqw4fNCdCaY0KNz_','New Amsterdam')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (41).webp" alt="">
+ <h1 class="moviename">
+     Kabhi Kushi Kabhi Gham
+  </h1>
+  <p>
+       2000
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/7uY1JbWZKPA?si=zY8qO6FNmQR1MwKj','Kabhi Kushi Kabhi Gham')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (42).webp" alt="">
+ <h1 class="moviename">
+     F.R.I.E.N.D.S
+  </h1>
+  <p>
+       1998
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/IEEbUzffzrk?si=CDRriAMtlnlBNDCC','F.R.I.E.N.D.S')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (43).webp" alt="">
+ <h1 class="moviename">
+     MAD
+  </h1>
+  <p>
+       2023
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/bQRCyrNmhj4?si=2cgoWPDDTwa5PtTl','MAD')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (44).webp" alt="">
+ <h1 class="moviename">
+     Forbidden Deductions
+  </h1>
+  <p>
+       2020
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/DSG5nLx6tIs?si=LQ06-ZTFJnyztAvi','Forbidden Deductions')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (45).webp" alt="">
+ <h1 class="moviename">
+     Preacher
+  </h1>
+  <p>
+       2017
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/ZHcj-xjJNxM?si=22AFdfXfRkxo_r39','Preacher')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (46).webp" alt="">
+ <h1 class="moviename">
+     Zindagi Na Milegi Dobara
+  </h1>
+  <p>
+       2015
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/FJrpcDgC3zU?si=a6Kr7v5DEXMGZxwz','Zindagi Na Milegi Dobara')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (47).webp" alt="">
+ <h1 class="moviename">
+     Hunter X Hunter
+  </h1>
+  <p>
+       2013
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/d6kBeJjTGnY?si=kbITB-4xDG0akHU7','Hunter X Hunter')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>   
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (48).webp" alt="">
+ <h1 class="moviename">
+     The Good Doctor
+  </h1>
+  <p>
+       2016
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/lnY9FWUTY84?si=X5NMtzSalai1ehqg','The Good Doctor')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>  
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (49).webp" alt="">
+ <h1 class="moviename">
+    How To Get Away With Murder
+  </h1>
+  <p>
+       2014
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/dkb-aBaxkVk?si=6F9D5x6UsTIX85k7','How To Get Away With')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>  
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (5).jpg" alt="">
+ <h1 class="moviename">
+     Khufiya
+  </h1>
+  <p>
+       2023
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/ByojhBwG_-E?si=NeQqcTmjFoZukZO0','Khufiya')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>     
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (5).webp" alt="">
+ <h1 class="moviename">
+     Stealth
+  </h1>
+  <p>
+       2005
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img id="play" src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/a2PW7a9ViDc?si=-hBd5pAY19GvyoMd','Stealth')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (50).webp" alt="">
+ <h1 class="moviename">
+     Young Sheldon
+  </h1>
+  <p>
+       2019
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/FStMMcj-RiA?si=0HbUptZ5GutPf_ak','Young Sheldon')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (71).jpg" alt="">
+ <h1 class="moviename">
+    You
+  </h1>
+  <p>
+       2022
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/ga1m0wjzscU?si=AymLyRq746q91nh-','You')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (72).webp" alt="">
+ <h1 class="moviename">
+     Jersey
+  </h1>
+  <p>
+       2021
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/BT0zd0kmTxM?si=l_BEQTqR9bPRSa-G','Jersey')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (73).webp" alt="">
+ <h1 class="moviename">
+     Kai Po Che
+  </h1>
+  <p>
+       2016
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/nGSyqEOo8k8?si=mFOWT4jvYOOG2IZK','Kai Po Che')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+</div>
+    <button class="handle right-handle"><div class="text">&#8250;</div></button>
+    
+  
+  
+  </div>
+  <div class="trending-row">
+    <div class="header-trending">
+    <h3 class="title">Get In On The Action</h3>
+    <div class="progress-bar" id="progress-bar">
+      <div class="progress-item"></div>
+      <div class="progress-item"></div>
+      <div class="progress-item"></div>
+      <div class="progress-item"></div>
+  
+      
+    </div>
+  </div>
+  <div class="movie-slider">
+    
+    <button class="handle left-handle"><div class="text">&#8249;</div></button>
+    <div class="slider" id="slider">
+      <div class="m1"> <div class="poster">
+        <img src="./assets/poster1_files/p (51).webp" alt="">
+       <h1 class="moviename">
+          Ramabanam
+        </h1>
+        <p>
+             2022
+            
+        </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+         <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+         <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/YmNdKWNbskI?si=9Tq8QvIVs9DnSSUr','Ramabanam')"><button class=trailer>Watch Trailer</button></a>
+      </div>
+    
+      </div>
+      <div class="m1"> <div class="poster">
+        <img src="./assets/poster1_files/p (52).webp" alt="">
+      <h1 class="moviename">
+        Chandramukhi 2
+       </h1>
+       <p>
+         2023
+       </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+       <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/LtSdVEw_RR4?si=Q5ca35TfqhjLhBj_','Chandramukhi 2')"><button class=trailer>Watch Trailer</button></a>
+      </div>
+
+</div>
+<div class="m1"> <div class="poster">
+  <img src="./assets/poster1_files/p (53).webp" alt="">
+ <h1 class="moviename">
+     Kal Ho Na Ho
+  </h1>
+  <p>
+       2000
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/g0eO74UmRBs?si=WfIcxHuOdZ2UI-up','Kal Ho Na Ho')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+  <img src="./assets/poster1_files/p (54).webp" alt="">
+ <h1 class="moviename">
+     The OC
+  </h1>
+  <p>
+       2003
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/83luogMA61c?si=vi0lp_FrUx7wJvs4','The OC')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+  <img src="./assets/poster1_files/p (55).webp" alt="">
+ <h1 class="moviename">
+     Better Call Saul
+  </h1>
+  <p>
+       2015
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/HN4oydykJFc?si=gD81uVXDVrrMDzez','Better Call Saul')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+  <img src="./assets/poster1_files/p (56).webp" alt="">
+ <h1 class="moviename">
+    Suits
+  </h1>
+  <p>
+       2012
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/85z53bAebsI?si=LhXclloqIHD5JOlH','Suits')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+  <img src="./assets/poster1_files/p (57).webp" alt="">
+ <h1 class="moviename">
+     Breaking Bad
+  </h1>
+  <p>
+       2008
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/HhesaQXLuRY?si=2dWv5FbuAV8ml-ew','Breaking Bad')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (58).webp" alt="">
+ <h1 class="moviename">
+     Jawan
+  </h1>
+  <p>
+       2023
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/MWOlnZSnXJo?si=bq9OIMkiAKgUhb8Q','Jawan')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (59).webp" alt="">
+ <h1 class="moviename">
+     Young Sheldon
+  </h1>
+  <p>
+       2018
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/FStMMcj-RiA?si=7yKWQm8j5RGzAdfh','Young Sheldon')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (6).jpg" alt="">
+ <h1 class="moviename">
+     You
+  </h1>
+  <p>
+       2022
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/ga1m0wjzscU?si=JXlw58b6fkkRJbko','You')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (6).webp" alt="">
+ <h1 class="moviename">
+     F9
+  </h1>
+  <p>
+       2021
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/aSiDu3Ywi8E?si=lL9_zWUxnZeIlZXt','F9')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (60).webp" alt="">
+ <h1 class="moviename">
+     Moneyball
+  </h1>
+  <p>
+       2014
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/-4QPVo0UIzc?si=scRaUw9a4w6-cuvG','Moneyball')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (61).webp" alt="">
+ <h1 class="moviename">
+     Infinite
+  </h1>
+  <p>
+       2020
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/_WWEOCQGxSw?si=Wym7T3_XYAYNYveD','Infinite')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (7).jpg" alt="">
+ <h1 class="moviename">
+     Onimusha
+  </h1>
+  <p>
+       2023
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/-1wsUxg68Ek?si=fic-mAdUCpKavQwJ','Onimusha')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (7).webp" alt="">
+ <h1 class="moviename">
+     Gemini Man
+  </h1>
+  <p>
+       2018
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/AbyJignbSj0?si=SieCLXyFLhlJ6FRE','Gemini Man')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (8).jpg" alt="">
+ <h1 class="moviename">
+     Narcos
+  </h1>
+  <p>
+       2016
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/xl8zdCY-abw?si=MImAkyUWO3F7v1jZ','Narcos')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>   
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (8).webp" alt="">
+ <h1 class="moviename">
+     Stree
+  </h1>
+  <p>
+       2018
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/gzeaGcLLl_A?si=ky5NLbLJONxOy-df','Stree')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>  
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (9).jpg" alt="">
+ <h1 class="moviename">
+     House of Cards
+  </h1>
+  <p>
+       2015
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/8QnMmpfKWvo?si=JPfNVHjT_FIkpxsf','House of Cards')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>  
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (9).webp" alt="">
+ <h1 class="moviename">
+     Insidious:The Red Door
+  </h1>
+  <p>
+       2022
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/ZuQuOnYnr3Q?si=kTXVgUc2_fxngYB_','Insidious:The Red Door')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>     
+<div class="m1"> <div class="poster">
+  <img src="./assets/poster1_files/px.jpg" alt="">
+
+ <h1 class="moviename">
+     Plan A Plan B
+  </h1>
+  <p>
+       2023
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/HykofdboPyg?si=8UBb49LLldrhiVwi','Plan A Plan B')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+  <img src="./assets/poster1_files/p (50).webp" alt="">
+ <h1 class="moviename">
+     Young Sheldon
+  </h1>
+  <p>
+       2018
+  </p>
+        <p id="genre">
+          Action, Thriller
+        </p>
+  <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+       <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/gCy_GJvTmG8?si=Geo62NSwVGCTSmzE','Young Sheldon')"><button class=trailer>Watch Trailer</button></a>
+</div>
+
+</div>
+<div class="m1"> <div class="poster">
+
+     <img src="./assets/poster1_files/p (74).webp" alt="">
+    <h1 class="moviename">
+        Assassination Classroom
+     </h1>
+     <p>
+          2016
+     </p>
+           <p id="genre">
+             Action, Thriller
+           </p>
+     <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+          <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/kgNkGohA20k?si=B-HW547cMBxP_cGq','Assassination Classroom')"><button class=trailer>Watch Trailer</button></a>
+   </div>
+   
+   </div>
+   <div class="m1"> <div class="poster">
+
+     <img src="./assets/poster1_files/p (75).webp" alt="">
+    <h1 class="moviename">
+        Kim's Convenience
+     </h1>
+     <p>
+          2020
+     </p>
+           <p id="genre">
+             Action, Thriller
+           </p>
+     <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+          <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/7_BT3jdkUPg?si=QfvIXPgqj1l777bl','Kim\'s Convenience')"><button class=trailer>Watch Trailer</button></a>
+   </div>
+   
+   </div>
+   <div class="m1"> <div class="poster">
+
+     <img src="./assets/poster1_files/p (76).webp" alt="">
+    <h1 class="moviename">
+        Bleach
+     </h1>
+     <p>
+          2015
+     </p>
+           <p id="genre">
+             Action, Thriller
+           </p>
+     <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+          <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/Eh6a3Lg8ZlQ?si=fzf2gFGQ2RYgidek','Bleach')"><button class=trailer>Watch Trailer</button></a>
+   </div>
+   
+   </div>
+   <div class="m1"> <div class="poster">
+
+     <img src="./assets/poster1_files/p (77).jpg" alt="">
+    <h1 class="moviename">
+        Formula 1:Drive to Survive
+     </h1>
+     <p>
+          2022
+     </p>
+           <p id="genre">
+             Action, Thriller
+           </p>
+     <a href="#"><img src="./assets/play-circle-regular-24.png"></a>
+          <a  href="javascript:void(0);" onclick="openModal('https://www.youtube.com/embed/wtJPe1ksS6E?si=6tdgHW1wDsFRQQOx','Formula 1:Drive to Survive')"><button class=trailer>Watch Trailer</button></a>
+   </div>
+   
+   </div>
+</div>
+    <button class="handle right-handle"><div class="text">&#8250;</div></button>
+    
+  
+  
+  </div>
+ 
+
+ 
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <iframe id="videoFrame" width="560" height="315" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+      <div class="movietitle"id="movietitle">
+        <h1 id="title"></h1>
+      </div>
+      
+    </div>
+  </div>
+</body>
+<footer class="footer">
+  <p class="footer-icons">
+    <a href="https://www.facebook.com/netflix/"><img src="./assets/facebook-logo-24.png" alt=""></a>
+    <a href="https://twitter.com/netflix"><img src="./assets/twitter-logo-24.png" alt=""></a>
+    <a href="https://www.youtube.com/@NetflixIndiaOfficial"><img src="./assets/youtube-logo-24.png" alt=""></a>
+    <a href="https://www.instagram.com/netflix_in/?hl=en"><img src="./assets/instagram-logo-24.png" alt=""></a>
+  </p>
+  <div class="footer-cols">
+    <ul id="footer-list">
+      <li><a href="#">Audio Description</a></li>
+      <li><a href="#">Investor Relations</a></li>
+      <li><a href="#">Legal Notices</a></li>
+      
+    </ul>
+    <ul id="footer-list">
+      <li><a href="#">Help Center</a></li>
+      <li><a href="#">Jobs</a></li>
+      <li><a href="#">Cookie Preferences</a></li>
+    
+    </ul>
+    <ul id="footer-list">
+     
+      <li><a href="#">Gift Cards</a></li>
+      <li><a href="#">Terms of Use</a></li>
+      <li><a href="#">Corporate Information</a></li>
+    </ul>
+    <ul id="footer-list">
+      <li><a href="#">Media Center</a></li>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </div>
+  <button id="footer-button">Service Code</button>
+  <p id="copyright">© Arjun 1997-2023 Netflix  Inc.</p>
+
+</footer>
